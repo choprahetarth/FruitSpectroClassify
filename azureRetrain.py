@@ -2,6 +2,8 @@ import time
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
 from azure.cognitiveservices.vision.customvision.training.models import ImageFileCreateEntry
 from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
+from datetime import datetime
+
 
 ENDPOINT = "https://fruit360.cognitiveservices.azure.com/"
 
@@ -40,16 +42,22 @@ def predictionFunction(filePath):
             print("\t" + prediction.tag_name +
                   ": {0:.2f}%".format(prediction.probability * 100))
 
+def anotherFunction():
+    image = "/Users/hetarth/Desktop/example_code/1_100.jpg"
+    return image
+
+
 # main function
 if __name__ == "__main__":
     print("this is invoked automatically")
+    now = datetime.now()
+    date_time = now.strftime("%m%d%Y%H%M%S")
     from picamera import PiCamera
     from time import sleep
     camera = PiCamera()
     camera.start_preview()
     sleep(5)
-    camera.capture('picture.jpg')
+    camera.capture('/picture.jpg'+date_time)
     camera.stop_preview()
-    predictionFunction("picture.jpg")
-    
-
+    #predictionFunction('/Users/hetarth/Desktop/example_code/aha.jpg')
+    #anotherFunction()
