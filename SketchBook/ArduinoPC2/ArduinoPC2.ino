@@ -102,9 +102,10 @@ void loop() {
     initiator(0);
     Serial.println("okay_ending");
   }
+  else if (inputVariable == "a") {
+    Serial.println("Started");
+  }
   else {
     Serial.println("INVALID");
   }
 }
-
-

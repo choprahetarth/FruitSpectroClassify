@@ -10,21 +10,43 @@ import serial
 import os, sys
 
 
-class WidgetGallery(QDialog):
+###################### COMM CLASS ###############################
+#                                                               #
+#                                                               #
+#################################################################
+
+class communicatorClassInititation: # class for initializing the communication
+  def __init__(self):
+      self.ser = serial.Serial()
+  
+class communicator(communicatorClassInititation): # class to run the communication
+  def parameterize(self,name,baud1): #function to specify the serial communication
+      self.ser.port = name 
+      self.ser.baudrate = baud1
+      self.ser.bytesize = serial.EIGHTBITS #number of bits per bytes
+      self.ser.parity = serial.PARITY_NONE #set parity check: no parity
+      self.ser.stopbits = serial.STOPBITS_TWO #number of stop bits
+      self.ser.open()
+      self.initilizer = 0
+  def outFlow(self,value): # function to specify the outflowing characters
+      self.value = value
+      self.ser.write(self.value)
+  def inFlow(self): # function to specify the inflowing charcters
+      self.data = self.ser.readline()[:-2]
+
+######################## GUI CLASS ##############################
+#                                                               #
+#                                                               #
+#################################################################
+class WidgetGallery(QDialog): 
     def __init__(self, parent=None):
         super(WidgetGallery, self).__init__(parent)
-
-        #disableWidgetsCheckBox = QCheckBox("&Disable widgets")
         
-        self.createTopLeftGroupBox()
+        self.createTopLeftGroupBox() # these functions initiate the four box regions
         self.createTopRightGroupBox()
         self.createBottomLeftTabWidget()
         self.createBottomRightGroupBox()
 
-        #disableWidgetsCheckBox.toggled.connect(self.topLeftGroupBox.setDisabled)
-        #disableWidgetsCheckBox.toggled.connect(self.topRightGroupBox.setDisabled)
-        #disableWidgetsCheckBox.toggled.connect(self.bottomLeftTabWidget.setDisabled)
-        #disableWidgetsCheckBox.toggled.connect(self.bottomRightGroupBox.setDisabled)
         firstButton = QPushButton("Choose A mode")
         firstButton.setDefault(True)
         secondButton = QPushButton("Choose B mode")
@@ -54,7 +76,6 @@ class WidgetGallery(QDialog):
         self.setWindowTitle("Styles")
 
 
-
     def createTopRightGroupBox(self):
         self.topRightGroupBox = QGroupBox("CLASSIFY FRUIT RIPENESS - MODE B")
         
@@ -78,17 +99,13 @@ class WidgetGallery(QDialog):
     
     def createTopLeftGroupBox(self):
         self.topLeftGroupBox = QGroupBox("CLASSIFY FRUIT TYPES - MODE A ")
-
         defaultPushButton = QPushButton("Start")
         defaultPushButton.setDefault(True)
-        defaultPushButton.clicked.connect(self.startModeA) ## MODE A START FUNCTION
-
+        defaultPushButton.clicked.connect(self.startModeA) 
         defaultPushButton1 = QPushButton("Stop")
         defaultPushButton1.setDefault(True)
-
         flatPushButton = QPushButton("Debug Mode")
         flatPushButton.setFlat(True)
-
         layout = QVBoxLayout()
         layout.addWidget(defaultPushButton)
         layout.addWidget(defaultPushButton1)
@@ -97,7 +114,10 @@ class WidgetGallery(QDialog):
         self.topLeftGroupBox.setLayout(layout)    
 
     def startModeA(self): # MODE A START FUNCTION
-        print("I am started")
+        print("I am here")
+        val = "a"
+        commRunObject.outFlow(val.encode())
+
 
     def createBottomLeftTabWidget(self):
         self.bottomLeftTabWidget = QGroupBox("Fruit Image")
@@ -136,7 +156,9 @@ class WidgetGallery(QDialog):
 
 
 if __name__ == '__main__':
-
+    commInitObject = communicatorClassInititation()
+    commRunObject = communicator()
+    commRunObject.parameterize("/dev/cu.usbmodem14101",9600)
     app = QApplication(sys.argv)
     gallery = WidgetGallery()
     gallery.show()
