@@ -42,22 +42,26 @@ def predictionFunction(filePath):
             print("\t" + prediction.tag_name +
                   ": {0:.2f}%".format(prediction.probability * 100))
 
-def anotherFunction():
-    image = "/Users/hetarth/Desktop/example_code/1_100.jpg"
-    return image
+def communicateToGUI():
+    imageSaved = 
 
+def captureAndProcess():
+    now = datetime.now()
+    date_time = now.strftime("%m%d%Y%H%M%S")
+    tempVariable = '/picture'+date_time+'.jpg'
+    #from picamera import PiCamera
+    #from time import sleep
+    #camera = PiCamera()
+    #camera.start_preview()
+    #sleep(5)
+    #camera.capture(tempVariable)
+    #camera.stop_preview()
+    #predictionFunction(tempVariable)
+    communicateToGUI()
 
 # main function
 if __name__ == "__main__":
     print("this is invoked automatically")
-    now = datetime.now()
-    date_time = now.strftime("%m%d%Y%H%M%S")
-    from picamera import PiCamera
-    from time import sleep
-    camera = PiCamera()
-    camera.start_preview()
-    sleep(5)
-    camera.capture('/picture.jpg'+date_time)
-    camera.stop_preview()
+    captureAndProcess()
     #predictionFunction('/Users/hetarth/Desktop/example_code/aha.jpg')
     #anotherFunction()

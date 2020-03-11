@@ -23,14 +23,14 @@ class communicator(communicatorClassInititation):
 
 if __name__ == "__main__":
   print("this is invoked automatically")
-  fileOpen = os.open('/Users/hetarth/Desktop/example_code/new.txt', os.O_RDWR|os.O_CREAT)
+  fileOpen = os.open('/Users/hetarth/Desktop/example_code/FruitSpectroClassify/new.txt', os.O_RDWR|os.O_CREAT)
   app = QApplication([])
   label = QLabel('Ripeness Tester')
 
   try:
     C = communicatorClassInititation()
     B = communicator()
-    B.parameterize("/dev/cu.usbmodem14201",9600)
+    B.parameterize("/dev/cu.usbmodem14101",9600)
     readOnceFlag = 1
     while True:
       val = input("Please enter the character")

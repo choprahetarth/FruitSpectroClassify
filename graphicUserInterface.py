@@ -6,6 +6,8 @@ from PyQt5.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateTimeEdit,
         QVBoxLayout, QWidget,QButtonGroup)
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+import serial
+import os, sys
 
 
 class WidgetGallery(QDialog):
@@ -69,8 +71,8 @@ class WidgetGallery(QDialog):
         layout.addWidget(defaultPushButton)
         layout.addWidget(defaultPushButton2)
         layout.addWidget(flatPushButton)
-        #defaultPushButton.clicked.connect(self.topLeftGroupBox.setEnabled)
-        #defaultPushButton2.clicked.connect(self.topLeftGroupBox.setDisabled)
+        defaultPushButton.clicked.connect(self.topLeftGroupBox.setEnabled)
+        defaultPushButton2.clicked.connect(self.topLeftGroupBox.setDisabled)
         layout.addStretch(1)
         self.topRightGroupBox.setLayout(layout)
     
@@ -79,6 +81,7 @@ class WidgetGallery(QDialog):
 
         defaultPushButton = QPushButton("Start")
         defaultPushButton.setDefault(True)
+        defaultPushButton.clicked.connect(self.startModeA) ## MODE A START FUNCTION
 
         defaultPushButton1 = QPushButton("Stop")
         defaultPushButton1.setDefault(True)
@@ -93,11 +96,14 @@ class WidgetGallery(QDialog):
         layout.addStretch(1)
         self.topLeftGroupBox.setLayout(layout)    
 
+    def startModeA(self): # MODE A START FUNCTION
+        print("I am started")
+
     def createBottomLeftTabWidget(self):
         self.bottomLeftTabWidget = QGroupBox("Fruit Image")
         imageView = QLabel()
-        #imageView.setPixmap(QPixmap("img.jpg"))
-        imageView.setPixmap(QPixmap((anotherFunction())))
+        imageView.setPixmap(QPixmap("image.jpg"))
+       #imageView.setPixmap(QPixmap((anotherFunction())))
         layout = QVBoxLayout()
         layout.addWidget(imageView)
         layout.addStretch()
@@ -105,14 +111,32 @@ class WidgetGallery(QDialog):
 
     def createBottomRightGroupBox(self):
         self.bottomRightGroupBox = QGroupBox("Group 3")
-        layout = QGridLayout()
+        layout = QVBoxLayout()
+        defaultPushButton = QPushButton("Apple")
+        defaultPushButton.setDefault(True)
+
+        defaultPushButton1 = QPushButton("Orange")
+        defaultPushButton1.setFlat(True)
+
+        flatPushButton = QPushButton("Guava")
+        flatPushButton.setFlat(True)
+
+        flatPushButton1 = QPushButton("Peach")
+        flatPushButton.setFlat(True)
+
+        layout.addWidget(defaultPushButton)
+        layout.addWidget(defaultPushButton1)
+        layout.addWidget(flatPushButton1)
+        layout.addWidget(flatPushButton)
+        layout.addStretch(1)
         self.bottomRightGroupBox.setLayout(layout)
+
+
+      
 
 
 if __name__ == '__main__':
 
-    import sys
-    from azureRetrain import anotherFunction
     app = QApplication(sys.argv)
     gallery = WidgetGallery()
     gallery.show()
