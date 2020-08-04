@@ -1,11 +1,11 @@
 import serial
 import os, sys
-from PyQt5.QtWidgets import QApplication, QLabel
+#from PyQt5.QtWidgets import QApplication, QLabel
 
 class communicatorClassInititation:
   def __init__(self):
       self.ser = serial.Serial()
-  
+
 class communicator(communicatorClassInititation):
   def parameterize(self,name,baud1):
       self.ser.port = name
@@ -24,8 +24,6 @@ class communicator(communicatorClassInititation):
 if __name__ == "__main__":
   print("this is invoked automatically")
   fileOpen = os.open('/Users/hetarth/Desktop/example_code/FruitSpectroClassify/new.txt', os.O_RDWR|os.O_CREAT)
-  app = QApplication([])
-  label = QLabel('Ripeness Tester')
 
   try:
     C = communicatorClassInititation()
@@ -39,10 +37,10 @@ if __name__ == "__main__":
       label = input ("Please enter the label")
       print(B.data.decode()+label)
       writeVariable = (b'\n'+B.data+label.encode())
-      if (val == 'r'):
+      if (val == 'r' or val == 'p' or  val == 'y'):
         print("Writing to File")
         os.write(fileOpen, writeVariable)
-        
-        
+
+
   except KeyboardInterrupt:
     exit()

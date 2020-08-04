@@ -42,13 +42,13 @@ def predictionFunction(filePath):
             print("\t" + prediction.tag_name +
                   ": {0:.2f}%".format(prediction.probability * 100))
 
-def communicateToGUI():
-    imageSaved = 
+#def communicateToGUI():
+#    imageSaved = 
 
 def captureAndProcess():
-    now = datetime.now()
-    date_time = now.strftime("%m%d%Y%H%M%S")
-    tempVariable = '/picture'+date_time+'.jpg'
+    #now = datetime.now()
+    #date_time = now.strftime("%m%d%Y%H%M%S")
+    #tempVariable = '/picture'+date_time+'.jpg'
     #from picamera import PiCamera
     #from time import sleep
     #camera = PiCamera()
@@ -56,8 +56,8 @@ def captureAndProcess():
     #sleep(5)
     #camera.capture(tempVariable)
     #camera.stop_preview()
-    #predictionFunction(tempVariable)
-    communicateToGUI()
+    predictionFunction(tempVariable)
+    #communicateToGUI()
 
 # main function
 if __name__ == "__main__":
