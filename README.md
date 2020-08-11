@@ -4,13 +4,13 @@ Ever since the inception of modern technologies such as IoT and AI/ML, the techn
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+Smart Fruit Segregation Machine uses a number of open source projects to work properly:
 
-* [Python] - HTML enhanced for web apps!
-* [Jupyter Notebook] - awesome web-based text editor
-* [Scikit-Learn] - Markdown parser done right. Fast and easy to extend.
-* [H20.ai Driverless AI] - great UI boilerplate for modern web apps
-* [Raspberry Pi] - evented I/O for the backend
-* [Arduino] - fast node.js network app framework [@tjholowaychuk]
-* [PyQT5] - the streaming build system
-* [Microsoft Azure CustomVision.Ai](https://breakdance.github.io/breakdance/) - HTML to Markdown converter
+* [Python](https://www.python.org/) - Programming Language widely accepted both in Automation and Machine Learning.
+* [Jupyter Notebook](https://jupyter.org/) - Used Google Colab with this, online Python Notebook for ML model prototyping.
+* [Scikit-Learn](https://scikit-learn.org/stable/) - Used as the primary Library for Prototyping ML Models.
+* [H20.ai Driverless AI](https://www.h2o.ai/products/h2o-driverless-ai/) - Used for AutoML.
+* [Raspberry Pi](https://www.raspberrypi.org/) - Used as the CPU of the machine with Serial Communication for controlling the Micro-Controller
+* [Arduino](https://www.arduino.cc/) - Used as the Primary Micro-Controller of the system for handling actuations and sensing. 
+* [PyQT5](https://www.riverbankcomputing.com/software/pyqt/) - Used to create a user-friendly GUI for controlling the Machine. 
+* [Microsoft Azure CustomVision.Ai](https://www.customvision.ai/) - Used as the primary cloud service for Image Processing in the system
