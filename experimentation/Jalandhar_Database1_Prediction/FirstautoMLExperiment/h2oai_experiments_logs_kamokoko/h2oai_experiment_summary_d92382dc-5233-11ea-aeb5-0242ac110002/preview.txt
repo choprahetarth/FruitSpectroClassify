@@ -1,0 +1,23 @@
+Experiment: d92382dc-5233-11ea-aeb5-0242ac110002
+
+ACCURACY [8/10]:
+- Training data size: *912 rows, 19 cols*
+- Feature evolution: *[LightGBM, XGBoostGBM]*, *3-fold CV**, 3 reps*
+- Final pipeline: *Ensemble (6 models), 3-fold CV*
+
+TIME [3/10]:
+- Feature evolution: *8 individuals*, up to *62 iterations*
+- Early stopping: After *5* iterations of no improvement
+
+INTERPRETABILITY [8/10]:
+- Feature pre-pruning strategy: Permutation Importance FS
+- Monotonicity constraints: enabled
+- Feature engineering search space: [Interactions, Original]
+
+[LightGBM, XGBoostGBM] models to train:
+- Model and feature tuning: *288*
+- Feature evolution: *1152*
+- Final pipeline: *6*
+
+Estimated runtime: *minutes*
+Auto-click Finish/Abort if not done in: *1 day*/*7 days*

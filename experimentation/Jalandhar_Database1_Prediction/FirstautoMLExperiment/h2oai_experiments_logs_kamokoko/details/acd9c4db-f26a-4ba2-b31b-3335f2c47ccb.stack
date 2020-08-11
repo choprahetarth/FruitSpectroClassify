@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "h2oaicore/systemutils.py", line 4353, in h2oaicore.systemutils._traced_func
+  File "h2oaicore/auto_dl.py", line 383, in h2oaicore.auto_dl.do_auto_dl_subprocess
+  File "h2oaicore/auto_dl_utils.py", line 341, in h2oaicore.auto_dl_utils.load_dataset
+  File "h2oaicore/systemutils.py", line 5150, in h2oaicore.systemutils.read_data
+h2oaicore.systemutils.InvalidDataError: Path to data '' does not exist.

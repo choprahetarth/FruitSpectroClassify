@@ -1,0 +1,45 @@
+Experiment: kamokoko (d92382dc-5233-11ea-aeb5-0242ac110002)
+  Version: 1.8.2, 2020-02-18 10:55
+  Settings: 8/3/8, seed=159502205, GPUs enabled
+  Train data: combined_cleaned_jal1.csv (912, 19)
+  Validation data: N/A
+  Test data: coupled_data.csv (148, 18)
+  Target column: Label (3-class)
+System specs: Docker/Linux, 60 GB, 4 CPU cores, 1/1 GPU
+  Max memory usage: 0.868 GB, 0.613 GB GPU
+Recipe: AutoDL (53 iterations, 8 individuals)
+  Validation scheme: stratified, 9 internal holdouts (3-fold CV)
+  Feature engineering: 89 features scored (7 selected)
+Timing: MOJO latency: 0.28168 millis (2.5MB)
+  Data preparation: 15.03 secs
+  Shift/Leakage detection: 19.56 secs
+  Model and feature tuning: 600.69 secs (199 of 288 models trained)
+  Feature evolution: 3204.45 secs (981 of 1152 models trained)
+  Final pipeline training: 76.12 secs (6 models trained)
+  Python / MOJO scorer building: 99.80 secs / 10.34 secs
+Validation score: LOGLOSS = 0.6497566 +/- 0.03059822 (baseline)
+Validation score: LOGLOSS = 0.6121613 +/- 0.0254355 (final pipeline)
+Test score:       LOGLOSS = 0.5582777 +/- 0.02713551 (final pipeline)
+
+Final validation scores (internal holdout, bootstrap on folds) +/- stddev:
+                   MCC = 0.6152012 +/- 0.02329956 (more is better)
+              MACROAUC = 0.7702322 +/- 0.01850286 (more is better)
+                  GINI = 0.7873455 +/- 0.01765933 (more is better)
+                    F2 = 0.7438699 +/- 0.01476829 (more is better)
+                    F1 = 0.7434674 +/- 0.01553304 (more is better)
+                   F05 = 0.7434674 +/- 0.01553304 (more is better)
+                 AUCPR = 0.789973 +/- 0.01766201 (more is better)
+                   AUC = 0.8936727 +/- 0.008829667 (more is better)
+              ACCURACY = 0.7434674 +/- 0.01553304 (more is better)
+    optimized: LOGLOSS = 0.6121613 +/- 0.0254355 (less is better)
+Final test scores (external holdout) +/- stddev:
+                   MCC = 0.6734694 +/- 0.05202754 (more is better)
+              MACROAUC = 0.9050307 +/- 0.03506663 (more is better)
+                  GINI = 0.8455736 +/- 0.03304355 (more is better)
+                    F2 = 0.7823129 +/- 0.03468503 (more is better)
+                    F1 = 0.7823129 +/- 0.03468503 (more is better)
+                   F05 = 0.7823129 +/- 0.03468503 (more is better)
+                 AUCPR = 0.8391282 +/- 0.03562974 (more is better)
+                   AUC = 0.9227868 +/- 0.01652178 (more is better)
+              ACCURACY = 0.7823129 +/- 0.03468503 (more is better)
+    optimized: LOGLOSS = 0.5582777 +/- 0.02713551 (less is better)

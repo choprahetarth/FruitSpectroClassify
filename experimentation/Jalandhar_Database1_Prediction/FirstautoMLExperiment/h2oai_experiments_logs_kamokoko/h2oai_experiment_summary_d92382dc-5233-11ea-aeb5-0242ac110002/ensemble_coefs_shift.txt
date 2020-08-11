@@ -1,0 +1,7 @@
+Coefficient,Shift of Coefficient,Description,Feature
+1127.266,-1188.417,N (Orig),13_N
+2932.101,-2877.553,F (Orig),5_F
+6513.608,-5590.572,G (Orig),6_G
+3610.547,-2153.434,H (Orig),7_H
+1234.9,-1316.731,I (Orig),86_I
+2849.506,-2307.14,J (Orig),9_J

@@ -1,0 +1,29 @@
+digraph {
+  graph[ranksep="2"]
+  rankdir="LR";
+  labelloc="t";
+  label="1_XGBoostGBMModel_1";
+    subgraph cluster_feature {
+        label="Features";
+        node_0 [shape=box, label="F"];
+        node_1 [shape=box, label="G"];
+        node_2 [shape=box, label="H"];
+        node_3 [shape=box, label="I"];
+        node_4 [shape=box, label="J"];
+        node_5 [shape=box, label="N"];
+    }
+    node_9 [shape=box, label="XGBoostGBMModel"];
+    node_0 -> node_9;
+    node_2 -> node_9;
+    node_1 -> node_9;
+    node_4 -> node_9;
+    node_9 -> node_6;
+    node_9 -> node_7;
+    node_9 -> node_8;
+    subgraph cluster_output {
+        label="Outputs";
+        node_6 [shape=box, label="Label.1"];
+        node_7 [shape=box, label="Label.2"];
+        node_8 [shape=box, label="Label.3"];
+    }
+}
