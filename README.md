@@ -1,10 +1,20 @@
-# FruitSpectroClassify
-# Code repository for the Engineering Final Year Project. 
-Ever since the inception of modern technologies such as IoT and AI/ML, the technologies have been proved to be very helpful in development of industries. One such use case has been carefully studied, and a solution has been provided in this literature. Sorting of fruits is a big task within the agricultural sector, and this task has been realized in an innovate way with the help of IoT and ML. This literature provides the design and development of a machine and an algorithm, capable of segregating fruits based on their ripeness level using MEMS Spectroscopy sensor and computer vision systems. The fruit is initially fed into the system where the Raspberry Pi Camera takes its image. The image processing is done using a cloud-computing platform known as customvision.ai, which has been provided by Microsoft Azure Cloud Services, hence incorporating a sense of IoT within the total framework. The platform has been trained specifically to predict apples with a maximum accuracy of 99%, and in general other fruits with an average accuracy of 83%. After that is done, three readings are taken by the Sparkfun Triad Spectroscopy Sensor, where an ensemble of custom trained XGBoost Machine Learning model was used to classify the fruit according it's ripeness level, with the level of Soluble Sugar Content (SSC) into three specific categories, unripe, mediocre ripe and perfectly ripe. This model was trained using 3660 apple readings taken from Unitec's Apple Sorting and Grading Machine from an industrial plant in Shimla. The model was trained with the help of Python 3.7 and an open source software - H2O’s Driverless.Ai. With the help of this software, the accuracy of the baseline model trained on python was increased by ~1%, it also increased the AUC (Area Under ROC) score by ~24%, F1 score by ~27%, Gini Score by ~50% and decreased the LOGLOSS by ~12%. The overall accuracy of classifying the fruit into different ripeness level classes was scored at approximately 80% (RMSEP – 0.23). The project also provides a Python Graphical User Interface (GUI), made on PyQt5, for integration of the hardware with the cloud-based software to realize a complete solution
+# Smart Fruit Segregation Machine
+
+Ever since the inception of modern technologies such as IoT and AI/ML, the technologies have been proved to be very helpful in development of industries. One such use case has been carefully studied, and Smart Fruit Segregation Machine solves one such problem. Sorting of fruits is a big task within the agricultural sector, and this task has been realized in an innovate way with the help of IoT, ML and Automation. 
+In this project the software for the Smart Fruit Segregation Machine is presented. 
+
+### Machine Features
+The features of the machine are presented as below- 
+* Provides a fully integrated machine capable of segregating fruits on the basis of their marketed grades using Computer Vision, Spectroscopy and Machine Learning.
+* Provides a Graphic User Interface making it easy for the user to use the machine.
+* Provides the user ability to retrain the model with images of fruits fed within the machine.
+* Provides a cost-friendly mechanical/mechatronic architecture flexible and customizable for different fruits.
+* Achieves a 80% accuracy in segregating Red Delicious Apples from Himachal, into it's three grades.
+
 
 ### Tech
 
-Smart Fruit Segregation Machine uses a number of open source projects to work properly:
+Smart Fruit Segregation Machine uses these particular tech stacks to work properly- 
 
 * [Python](https://www.python.org/) - Programming Language widely accepted both in Automation and Machine Learning.
 * [Jupyter Notebook](https://jupyter.org/) - Used Google Colab with this, online Python Notebook for ML model prototyping.
