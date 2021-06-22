@@ -1,7 +1,0 @@
-Relative Importance,Shift of Relative Importance,Description,Feature
-1,0,G (Orig),6_G
-0.5543083,0.07811072,H (Orig),7_H
-0.4501501,-0.0298208,F (Orig),5_F
-0.4374697,0.01144773,J (Orig),9_J
-0.1895877,-0.02121808,I (Orig),86_I
-0.1730632,-0.01824947,N (Orig),13_N

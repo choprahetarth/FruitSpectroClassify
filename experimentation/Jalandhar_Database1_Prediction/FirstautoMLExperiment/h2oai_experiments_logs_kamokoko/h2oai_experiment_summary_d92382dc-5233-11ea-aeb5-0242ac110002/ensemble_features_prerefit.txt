@@ -1,7 +1,0 @@
-Relative Importance,Standard Deviation of Relative Importance,Description,Feature
-1,0,G (Orig),6_G
-0.4799709,0.06254885,F (Orig),5_F
-0.4761976,0.01084693,H (Orig),7_H
-0.4260219,0.1170038,J (Orig),9_J
-0.2108058,0,I (Orig),86_I
-0.1913127,0,N (Orig),13_N

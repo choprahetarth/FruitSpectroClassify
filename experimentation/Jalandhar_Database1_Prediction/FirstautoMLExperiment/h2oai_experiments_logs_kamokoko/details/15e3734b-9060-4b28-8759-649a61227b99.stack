@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "h2oaicore/systemutils.py", line 1696, in h2oaicore.systemutils.mppool.try_get_internal
-  File "/opt/h2oai/dai/python/lib/python3.6/concurrent/futures/_base.py", line 432, in result
-    return self.__get_result()
-  File "/opt/h2oai/dai/python/lib/python3.6/concurrent/futures/_base.py", line 384, in __get_result
-    raise self._exception
-concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.

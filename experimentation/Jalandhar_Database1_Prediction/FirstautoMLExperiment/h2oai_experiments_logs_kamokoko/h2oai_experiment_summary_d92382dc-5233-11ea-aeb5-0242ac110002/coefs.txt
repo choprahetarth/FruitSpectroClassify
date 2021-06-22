@@ -1,7 +1,0 @@
-Coefficient,Standard Deviation of Coefficient,Description,Feature
-2315.683,63.43169,N (Orig),13_N
-3108.357,57.14459,F (Orig),5_F
-5918.715,94.96658,G (Orig),6_G
-2772.081,63.06094,H (Orig),7_H
-2551.631,64.52724,I (Orig),86_I
-2021.031,39.78353,J (Orig),9_J

@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "h2oaicore/systemutils.py", line 4353, in h2oaicore.systemutils._traced_func
-  File "h2oaicore/ga_misc.py", line 2609, in h2oaicore.ga_misc.get_population
-  File "h2oaicore/genes.py", line 2461, in h2oaicore.genes.GenePool.__init__
-  File "h2oaicore/utils.py", line 2078, in h2oaicore.utils.BasePool.__init__
-  File "h2oaicore/utils.py", line 2300, in h2oaicore.utils.BasePool.restrict_blueprints
-  File "h2oaicore/genes.py", line 3136, in h2oaicore.genes.GenePool._restrict_blueprints
-  File "h2oaicore/genes.py", line 3056, in h2oaicore.genes.GenePool._restrict_blueprints.restrict_by_only_te_for_cats
-h2oaicore.systemutils.InvalidGenomeError
